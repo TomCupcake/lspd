@@ -19,6 +19,9 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
     <img src="LSPD.png" class="rounded-circle" alt="Cinque Terre" width="50">
+    <span id="welcomeUser" class="navbar-text text-white ms-2 d-none">
+       שלום, <span id="usernameDisplay"></span>
+    </span>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -36,10 +39,26 @@
         <li class="nav-item">
           <a class="nav-link" href="policeprocedures.html">Police Procedures</a>
         </li>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="uniformandgear.html">Uniform & Gear</a>
         </li>
+        <li class="nav-item" id="loginBtn">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Log In
+          </a>
+        </li>
+<li class="nav-item d-none" id="logoutBtn">
+  <a class="nav-link" href="#" onclick="logout()">Log Out</a>
+</li>
+
+<li class="nav-item d-none" id="commandInfoNav">
+  <a class="nav-link" href="commandinfo.html">Command Info</a>
+</li>
+
+        <li class="nav-item d-none" id="commandInfoNav">
+          <a class="nav-link" href="commandinfo.html">Command Info</a>
+        </li>
+
       </ul>
     </div>
   </div>
@@ -116,5 +135,83 @@
     האתר נבנה על ידי tomcupcake
     ©
   </h6>
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title">Login</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <input type="text" id="username" class="form-control mb-2" placeholder="Username">
+        <input type="password" id="password" class="form-control" placeholder="Password">
+        <p id="loginError" class="text-danger mt-2 d-none">פרטים שגויים</p>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-success" onclick="login()">Log In</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+  const users = {
+    "Wesley": "tomcupcake",
+    "Bar": "_.bar.",
+    "Roi": ".roi",
+    "Tom": "amashelha.",
+    "Del": "harelg2",
+    "Arthur": "panda_q",
+    "Lamar": "liel1267.",
+    "Lecard": "callsignrazer"
+  };
+
+  function login() {
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+
+    if (users[user] && users[user] === pass) {
+      localStorage.setItem("loggedUser", user);
+      applyLoginState();
+      bootstrap.Modal.getInstance(document.getElementById("loginModal")).hide();
+    } else {
+      document.getElementById("loginError").classList.remove("d-none");
+    }
+  }
+
+  function logout() {
+    localStorage.removeItem("loggedUser");
+    applyLoginState();
+  }
+
+  function applyLoginState() {
+    const user = localStorage.getItem("loggedUser");
+
+    if (user) {
+      document.getElementById("commandInfoNav").classList.remove("d-none");
+      document.getElementById("logoutBtn").classList.remove("d-none");
+      document.getElementById("welcomeUser").classList.remove("d-none");
+
+      document.getElementById("loginBtn").classList.add("d-none");
+
+      document.getElementById("usernameDisplay").innerText = user;
+    } else {
+      document.getElementById("commandInfoNav").classList.add("d-none");
+      document.getElementById("logoutBtn").classList.add("d-none");
+      document.getElementById("welcomeUser").classList.add("d-none");
+
+      document.getElementById("loginBtn").classList.remove("d-none");
+    }
+  }
+
+  // בדיקה אוטומטית בטעינת הדף
+  applyLoginState();
+</script>
+
+
 </body>
 </html>
