@@ -1,3 +1,61 @@
+/* ===== Fonts Loader ===== */
+
+@font-face {
+    font-family: "Lemon Regular";
+    src: url("../fonts/Lemon-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Abraham";
+    src: url("../fonts/Abraham-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Gan CLM Bold";
+    src: url("../fonts/GanCLM-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Gisha";
+    src: url("../fonts/Gisha-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Guttman-Aharoni Bold";
+    src: url("../fonts/Guttman-Aharoni-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Comix No2 CLM";
+    src: url("../fonts/ComixNo2CLM-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Russo One Regular";
+    src: url("../fonts/RussoOne-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 h1{
     text-align: center;
     direction: ltr;
@@ -85,3 +143,4 @@ h6{
  border-top-width: 0.2em;
  background-color: #f1e8e8;
 }
+
