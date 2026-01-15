@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <title>LSPD Patrol-Uniform & Gear</title>
+  <link rel="icon" href="Patrol.png" type="image/png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -9,10 +10,13 @@
   <link rel="stylesheet" href="design.css">
 </head>
 <body>
-<!-- Navbar -->
+<!-- Navbar - MAIN -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
     <img src="LSPD.png" class="rounded-circle" alt="Cinque Terre" width="50">
+    <span id="welcomeUser" class="navbar-text text-white ms-2 d-none">
+       שלום, <span id="usernameDisplay"></span>
+    </span>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,24 +29,47 @@
           <a class="nav-link" href="roster.html">Roster</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pws.html">Patrol Weekly Schedule</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="policeprocedures.html">Police Procedures</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Patrol.html">Patrol</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="uniformandgear.html">Uniform & Gear</a>
+          <a class="nav-link" href="Detective.html">Detective</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="SWAT.html">S.W.A.T</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-<!-- Navbar -->
-<div id="section3" class="container-fluid bg-secondary text-white" style="padding:200px 20px;">
-  <h2> פק"ל ומדים משטרתיים עבור הפטרול </h2>
+<!-- Navbar - MAIN -->
+<div id="section3" class="container-fluid bg text-white" style="background-color:#0F2854; padding:1px 20px;">
+<!-- Navbar - Patrol -->
+<nav class="navbar navbar-expand-sm navbar-dark py-2"
+     style="background-color:#353c42; border-radius:999px; width:fit-content; margin:0 auto 20px auto;">
+  <div class="container-fluid justify-content-center px-4">
+    <img src="Patrol.png" class="rounded-circle" alt="Cinque Terre" width="50">
+    <ul class="navbar-nav small">
+      <li class="nav-item">
+        <a class="nav-link px-3 text-white" href="Patrol.html">Patrol Home Page</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-3 text-white" href="pws.html">Patrol Weekly Schedule</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-3 text-white" href="uniformandgear.html">Uniform & Gear</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- Navbar - Patrol -->
 </div>
-<div id="section4" class="container-fluid bg-info text-black" style="padding:1px 20px;">
+<div id="section3" class="container-fluid" style="background-color:#0F2854; padding:100px 20px;">
+  <h2 class="text-white"> פק"ל ומדים משטרתיים עבור הפטרול </h2>
+</div>
+<div id="section4" class="container-fluid" style="background-color:#4988C4; padding:1px 20px;">
   <h2> מדים: </h2>
   <h4> :Cadet </h4>
   <p> Shirt: 548, Undershirt: 266, Arms: 1, Vest: 78, Pants: 202, Shoes: 25, Decals: 0, Neckwear: 192 </p>
@@ -68,19 +95,18 @@
   <p>Shirt: 1026, Undershirt: 15, Arms: 198, Vest: 0, Pants: 202, Bags: 119, Shoes: 25, Decals: 0, Neckwear: 192</p>
   <img src="trainingu.png" class="rounded" alt="Cinque Terre">
 </div>
-<div id="section5" class="container-fluid bg-dark text-white" style="padding:1px 20px;">
+<div id="section5" class="container-fluid" style="background-color:#a4d2fd; padding:1px 20px;">
   <h2>פק"ל</h2>
   <h4>:Cadet</h4>
   <img src="pakalcadet.png" class="rounded" alt="Cinque Terre">
   <h4>:Officer/Senior Officer</h4>
   <img src="pakalofficersenior.png" class="rounded" alt="Cinque Terre">
 </div>
-<!-- Bottom -->
-<div id="section3" class="container-fluid bg-basic text-black" style="padding:25px 20px;"></div>
-
-  <img src="rvrp.png" class="rounded" alt="Cinque Terre" width="50" >
-  <h6>
-    האתר נבנה על ידי tomcupcake
-    ©
+<!-- Credit -->
+<div id="section3" class="container-fluid bg-basic text-black text-center" style="padding:1px 20px;">
+  <img src="rvrp.png" class="rounded mx-auto d-block" alt="Cinque Terre" width="50">
+  <h6 class="mt-2">
+    האתר נבנה על ידי tomcupcake ©
   </h6>
-<!-- Bottom -->
+</div>
+<!-- Credit -->
