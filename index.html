@@ -1,140 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
-  <title>LSPD Home Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LSPD - משטרת לוס סנטוס</title>
   <link rel="icon" href="LSPD.png" type="image/png">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="design.css">
-  <style>
-  body {
-      position: relative; 
-  }
-  </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+<body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <div class="container-fluid">
-    <img src="LSPD.png" class="rounded-circle" alt="Cinque Terre" width="50">
-    <span id="welcomeUser" class="navbar-text text-white ms-2 d-none">
-       שלום, <span id="usernameDisplay"></span>
-    </span>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home Page</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="roster.html">Roster</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="policeprocedures.html">Police Procedures</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Patrol.html">Patrol</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Detective.html">Detective</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="SWAT.html">S.W.A.T</a>
-        </li>
-      </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="LSPD.png" alt="LSPD" width="48" class="me-2 rounded-circle">
+        LSPD
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">ראשי</a></li>
+          <li class="nav-item"><a class="nav-link" href="roster.html">רוסטר</a></li>
+          <li class="nav-item"><a class="nav-link" href="policeprocedures.html">נהלים</a></li>
+          <li class="nav-item"><a class="nav-link" href="Patrol.html">פטרול</a></li>
+          <li class="nav-item"><a class="nav-link" href="Detective.html">דיטקטיב</a></li>
+          <li class="nav-item"><a class="nav-link" href="SWAT.html">סוואט</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Hero with Carousel -->
+<section id="home" class="hero position-relative overflow-hidden">
+  <div id="heroCarousel" class="carousel slide carousel-fade h-100" data-bs-ride="carousel" data-bs-interval="5500">
+    <div class="carousel-inner h-100">
+      <div class="carousel-item active h-100">
+        <img src="hallway.png" class="d-block w-100 h-100 object-fit-cover" alt="מסדרון">
+      </div>
+      <div class="carousel-item h-100">
+        <img src="command.png" class="d-block w-100 h-100 object-fit-cover" alt="חדר פיקוד">
+      </div>
+      <div class="carousel-item h-100">
+        <img src="Investigation.png" class="d-block w-100 h-100 object-fit-cover" alt="חקירות">
+      </div>
+      <div class="carousel-item h-100">
+        <img src="promotion.png" class="d-block w-100 h-100 object-fit-cover" alt="קידום">
+      </div>
+      <div class="carousel-item h-100">
+        <img src="wintronefes.png" class="d-block w-100 h-100 object-fit-cover" alt="כניסה">
+      </div>
+    </div>
+
+    <!-- Overlay + Content -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center text-center hero-overlay">
+      <div class="container position-relative">
+        <div class="hero-text-bg p-4 p-md-5 rounded-4 shadow-lg">
+          <h1 class="display-3 display-md-2 fw-bold mb-3 mb-md-4 text-shadow">משטרת לוס סנטוס</h1>
+          <p class="lead fs-4 fs-md-3 mb-4 mb-md-5 text-shadow">אתר מידע לשוטרים</p>
+          <p class="lead fs-4 fs-md-3 mb-4 mb-md-5 text-shadow fst-italic">
+            "To Obey & Survive"
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-</nav>
-<!-- Navbar -->
+</section>
 
-<div id="section1" class="container-fluid text-white" 
-     style="padding:200px 20px; 
-            background-image: url('hallway.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;">
-<h1 style="font-size: 70px;">RVRP Los Santos Police Department Website</h1>
-</div>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <img src="rvrp.png" alt="RV-RP" width="60" class="mb-3 rounded-circle">
+      <p class="mb-1">© 2025–2026 | האתר נבנה על ידי tomcupcake</p>
+      <p class="text-muted small">Los Santos Police Department – Roleplay Server</p>
+    </div>
+  </footer>
 
-<div id="section3" class="container-fluid bg-secondary text-white" style="padding:200px 20px;">
-  <h2>ברוכים הבאים לאתר של משטרת לוס סנטוס!</h2>
-  <h4 style="font-weight: bold;"> מידע כללי </h4>
-  <p>
-    ברוכים הבאים לאתר של משטרת לוס סנטוס!
-  </p>
-  <p>
-    בכדי לצפות בסדר כוח האדם של המשטרה יש לגשת ל-Roster.
-  </p>
-  <p>
-    בכדי לצפות בלו"ז השבועי של הפטרול יש לצפות ב-:Patrol Weekly Schedule.
-  </p>
-  <p>
-    בכדי לצפות בנהלים המשטרתיים יש לגשת לדף בשם: Police Procedures
-  </p>
-  <p>
-    נוסף על כך, בכדי לצפות במידע עבור אחת היחידות, יש ללחוץ על שם היחידה
-  </p>
-  <p>---------- הודעות מהפיקוד: ----------</p>
-  <p>-</p>
-  <!-- Carousel -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-  <!-- Indicators/dots -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
-  </div>
-  
-  <!-- The slideshow/carousel -->
-<div class="carousel-inner">
-  <div class="carousel-item active">
-    <img src="command.png" class="d-block mx-auto" style="width:50%">
-  </div>
-
-  <div class="carousel-item">
-    <img src="mrpd.png" class="d-block mx-auto" style="width:50%">
-  </div>
-
-  <div class="carousel-item">
-    <img src="promotion.png" class="d-block mx-auto" style="width:50%">
-  </div>
-
-  <div class="carousel-item">
-    <img src="wintronefes.png" class="d-block mx-auto" style="width:50%">
-  </div>
-</div>
-
-  
-  <!-- Left and right controls/icons -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
-</div>
-
-
-<!-- Credit -->
-<div id="section3" class="container-fluid bg-basic text-black text-center" style="padding:1px 20px;">
-  <img src="rvrp.png" class="rounded mx-auto d-block" alt="Cinque Terre" width="50">
-  <h6 class="mt-2">
-    האתר נבנה על ידי tomcupcake ©
-  </h6>
-</div>
-<!-- Credit -->
-
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

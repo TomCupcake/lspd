@@ -1,190 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
-  <title>LSPD Patrol Weekly Schedule</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LSPD - לוח זמנים שבועי פטרול</title>
   <link rel="icon" href="Patrol.png" type="image/png">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="design.css">
 </head>
 <body>
-<!-- Navbar - MAIN -->
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <div class="container-fluid">
-    <img src="LSPD.png" class="rounded-circle" alt="Cinque Terre" width="50">
-    <span id="welcomeUser" class="navbar-text text-white ms-2 d-none">
-       שלום, <span id="usernameDisplay"></span>
-    </span>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home Page</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="roster.html">Roster</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="policeprocedures.html">Police Procedures</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Patrol.html">Patrol</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Detective.html">Detective</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="SWAT.html">S.W.A.T</a>
-        </li>
-      </ul>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="LSPD.png" alt="LSPD" width="48" class="me-2 rounded-circle">
+        LSPD
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">ראשי</a></li>
+          <li class="nav-item"><a class="nav-link" href="roster.html">רוסטר</a></li>
+          <li class="nav-item"><a class="nav-link" href="policeprocedures.html">נהלים</a></li>
+          <li class="nav-item"><a class="nav-link active" href="Patrol.html">פטרול</a></li>
+          <li class="nav-item"><a class="nav-link" href="Detective.html">דיטקטיב</a></li>
+          <li class="nav-item"><a class="nav-link" href="SWAT.html">סוואט</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Patrol Sub-Navbar -->
+  <div class="sub-nav bg-dark py-3 mt-5">
+    <div class="container">
+      <nav class="navbar navbar-expand-sm navbar-dark rounded-pill mx-auto shadow" style="background-color: #353c42; max-width: fit-content;">
+        <div class="container-fluid justify-content-center px-4">
+          <img src="Patrol.png" alt="Patrol Unit" width="48" class="me-3 rounded-circle">
+          <ul class="navbar-nav small">
+            <li class="nav-item"><a class="nav-link px-4" href="Patrol.html">דף הבית פטרול</a></li>
+            <li class="nav-item"><a class="nav-link active px-4" href="pws.html">לוח זמנים שבועי</a></li>
+            <li class="nav-item"><a class="nav-link px-4" href="uniformandgear.html">מדים וציוד</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
   </div>
-</nav>
-<!-- Navbar - MAIN -->
-<div id="section2" class="container-fluid bg text-white" style="background-color:#3170aa; padding:1px 20px;">
-<!-- Navbar - Patrol -->
-<nav class="navbar navbar-expand-sm navbar-dark py-2"
-     style="background-color:#353c42; border-radius:999px; width:fit-content; margin:0 auto 20px auto;">
-  <div class="container-fluid justify-content-center px-4">
-    <img src="Patrol.png" class="rounded-circle" alt="Cinque Terre" width="50">
-    <ul class="navbar-nav small">
-      <li class="nav-item">
-        <a class="nav-link px-3 text-white" href="Patrol.html">Patrol Home Page</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link px-3 text-white" href="pws.html">Patrol Weekly Schedule</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link px-3 text-white" href="uniformandgear.html">Uniform & Gear</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<!-- Navbar - Patrol -->
-</div>
-<div id="section2" class="container-fluid bg text-white" style="background-color:#3170aa; padding:276px 20px;">
-    <h2> לוח זמנים יחידת הפטרול: </h2>
-    <h3>4-10.1.2026</h3>
-    <!-- Table -->
-    <div class="container mt-3">
-    <table class="table">
-        <thead class="table-dark">
-        <tr>
-        <th>יום/שעה</th>
-        <th>ראשון</th>
-        <th>שני</th>
-        <th>שלישי</th>
-        <th>רביעי</th>
-        <th>חמישי</th>
-        <th>שישי</th>
-        <th>שבת</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>15:00</td>
-        <td>-</td> <!-- יום ראשון-->
-        <td>-</td> <!-- יום שני-->
-        <td>-</td> <!-- יום שלישי-->
-        <td>-</td> <!-- יום רביעי-->
-        <td>-</td> <!-- יום חמישי-->
-        <td>-</td> <!-- יום שישי-->
-        <td>-</td> <!-- יום שבת-->
-      </tr>
-      <tr>
-        <td>16:00</td>
-        <td>-</td> <!-- יום ראשון-->
-        <td>-</td> <!-- יום שני-->
-        <td>-</td> <!-- יום שלישי-->
-        <td>-</td> <!-- יום רביעי-->
-        <td>-</td> <!-- יום חמישי-->
-        <td>-</td> <!-- יום שישי-->
-        <td>-</td> <!-- יום שבת-->
-      </tr>
-      <tr>
-        <td>17:00</td>
-        <td>-</td> <!-- יום ראשון-->
-        <td>-</td> <!-- יום שני-->
-        <td>-</td> <!-- יום שלישי-->
-        <td>-</td> <!-- יום רביעי-->
-        <td>-</td> <!-- יום חמישי-->
-        <td>-</td> <!-- יום שישי-->
-        <td>-</td> <!-- יום שבת-->
-      </tr>
-      <tr>
-        <td>18:00</td>
-        <td>-</td> <!-- יום ראשון-->
-        <td>-</td> <!-- יום שני-->
-        <td>-</td> <!-- יום שלישי-->
-        <td>-</td> <!-- יום רביעי-->
-        <td>-</td> <!-- יום חמישי-->
-        <td>-</td> <!-- יום שישי-->
-        <td>-</td> <!-- יום שבת-->
-      </tr>
-      <tr>
-        <td>19:00</td>
-        <td>-</td> <!-- יום ראשון-->
-        <td>-</td> <!-- יום שני-->
-        <td>-</td> <!-- יום שלישי-->
-        <td>-</td> <!-- יום רביעי-->
-        <td>-</td> <!-- יום חמישי-->
-        <td>-</td> <!-- יום שישי-->
-        <td>-</td> <!-- יום שבת-->
-      </tr>
-      <tr>
-        <td>20:00</td>
-        <td>-</td> <!-- יום ראשון-->
-        <td>-</td> <!-- יום שני-->
-        <td>-</td> <!-- יום שלישי-->
-        <td>-</td> <!-- יום רביעי-->
-        <td>-</td> <!-- יום חמישי-->
-        <td>-</td> <!-- יום שישי-->
-        <td>-</td> <!-- יום שבת-->
-      </tr>
-      <tr>
-        <td>21:00</td>
-        <td>-</td> <!-- יום ראשון-->
-        <td>-</td> <!-- יום שני-->
-        <td>-</td> <!-- יום שלישי-->
-        <td>-</td> <!-- יום רביעי-->
-        <td>-</td> <!-- יום חמישי-->
-        <td>-</td> <!-- יום שישי-->
-        <td>-</td> <!-- יום שבת-->
-      </tr>
-      <tr>
-        <td>22:00</td>
-        <td>-</td> <!-- יום ראשון-->
-        <td>-</td> <!-- יום שני-->
-        <td>-</td> <!-- יום שלישי-->
-        <td>-</td> <!-- יום רביעי-->
-        <td>-</td> <!-- יום חמישי-->
-        <td>-</td> <!-- יום שישי-->
-        <td>-</td> <!-- יום שבת-->
-      </tr>
-      <tr>
-        <td>23:00</td>
-        <td>-</td> <!-- יום ראשון-->
-        <td>-</td> <!-- יום שני-->
-        <td>-</td> <!-- יום שלישי-->
-        <td>-</td> <!-- יום רביעי-->
-        <td>-</td> <!-- יום חמישי-->
-        <td>-</td> <!-- יום שישי-->
-        <td>-</td> <!-- יום שבת-->
-      </tr>
-      <tr>
-        <td>00:00</td>
-        <td>-</td> <!-- יום ראשון-->
-        <td>-</td> <!-- יום שני-->
-        <td>-</td> <!-- יום שלישי-->
-        <td>-</td> <!-- יום רביעי-->
-        <td>-</td> <!-- יום חמישי-->
-        <td>-</td> <!-- יום שישי-->
-        <td>-</td> <!-- יום שבת-->
-      </tr>
-<!-- Table -->
-</div>
 
+  <!-- Main Content -->
+  <main class="patrol-page pt-5">
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-white mb-3">לוח זמנים שבועי - יחידת הפטרול</h1>
+        <p class="lead text-white-75 fs-4">
+          4–10 בינואר 2026
+        </p>
+        <div class="divider mx-auto my-4"></div>
+      </div>
+
+      <!-- Schedule Table -->
+      <div class="schedule-card card bg-dark-transparent shadow-lg border-0 overflow-hidden">
+        <div class="card-body p-4 p-md-5">
+          <div class="table-responsive">
+            <table class="table table-dark table-hover table-bordered text-center">
+              <thead class="table-primary">
+                <tr>
+                  <th scope="col">שעה / יום</th>
+                  <th scope="col">ראשון</th>
+                  <th scope="col">שני</th>
+                  <th scope="col">שלישי</th>
+                  <th scope="col">רביעי</th>
+                  <th scope="col">חמישי</th>
+                  <th scope="col">שישי</th>
+                  <th scope="col">שבת</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">17:00</th>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th scope="row">18:00</th>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th scope="row">19:00</th>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th scope="row">20:00</th>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th scope="row">21:00</th>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th scope="row">22:00</th>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th scope="row">23:00</th>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th scope="row">00:00</th>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- הערה קטנה -->
+          <div class="text-center mt-5">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-5 mt-5">
+    <div class="container">
+      <img src="rvrp.png" alt="RV-RP" width="60" class="mb-3 rounded-circle">
+      <p class="mb-2">© 2025–2026 | האתר נבנה על ידי tomcupcake</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

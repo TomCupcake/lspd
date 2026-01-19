@@ -1,135 +1,400 @@
-@font-face {
-    font-family: 'Lemon Regular';
-    src: url('fonts/Lemon-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+/* ==========================================
+   Modern LSPD Website Design
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'Abraham';
-    src: url('fonts/Abraham-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+body {
+  font-family: 'Rubik', system-ui, sans-serif;
+  direction: rtl;
+  background-color: #f8f9fa;
+  color: #222;
+  line-height: 1.6;
 }
 
-@font-face {
-    font-family: 'Gan CLM Bold';
-    src: url('fonts/GanCLM-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+/* Navbar */
+.navbar {
+  transition: all 0.3s ease;
 }
 
-@font-face {
-    font-family: 'Gisha';
-    src: url('fonts/Gisha.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+.navbar.scrolled {
+  background-color: rgba(33, 37, 41, 0.98) !important;
+  backdrop-filter: blur(8px);
 }
 
-@font-face {
-    font-family: 'Guttman-Aharoni Bold';
-    src: url('fonts/Guttman-Aharoni-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+/* Hero with Carousel */
+.hero {
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  position: relative;
 }
 
-@font-face {
-    font-family: 'Comix No2 CLM';
-    src: url('fonts/comixno2clm_bold-webfont.ttf') format('truetype'); /* או Bold אם אתה מעדיף */
-    font-weight: normal;
-    font-style: normal;
+.hero .carousel,
+.hero .carousel-inner,
+.hero .carousel-item,
+.hero .carousel-item img {
+  height: 100% !important;
 }
 
-@font-face {
-    font-family: 'Russo One Regular';
-    src: url('fonts/RussoOne-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-h1{
-    text-align: center;
-    direction: ltr;
-    font-family: 'Lemon Regular';
-    font-size: 50px;
-}
-h2{
-    text-align: center;
-    direction: rtl;
-    font-family: 'Abraham';
-    font-size: 50px;
-}
-h3{
-    text-align: center;
-    direction: rtl;
-    font-family: 'Gan CLM Bold';
-    font-size: 28px;
-}
-h4{
-        text-align: center;
-    direction: rtl;
-    font-family: 'Gisha';
-    font-size: 28px;
-}
-th{
-    text-align: center;
-    direction: rtl;
-    font-family: 'Guttman-Aharoni Bold';
-    font-size: 24px;
-}
-td{
-    text-align: center;
-    direction: rtl;
-    font-family: 'Comix No2 CLM';
-    font-size: 23px;
-}
-p{
-    text-align: center;
-    direction: rtl;
-    font-family: 'Comix No2 CLM';
-    font-size: 23px;
-}
-div{
-    text-align: center;
-    direction: rtl;
-    font-family: 'Comix No2 CLM';
-    font-size: 23px;
-}
-a{
-    text-align: center;
-    direction:rtl;
-    font-family: 'Russo One Regular';
-    font-size: 23px;
-}
-h6{
-    text-align: center;
-    direction: rtl;
-    font-family: 'Comix No2 CLM';
-    font-size: 10px;
-}
-.input {
- background-color: #383838;
- border: 1ex solid none;
- border-top-width: 1.7em;
- margin: 0;
- padding: 0;
- color: #383838;
- word-wrap: break-word;
- outline: 7px solid #383838;
- height: 30px;
- font-size: 17px;
- text-align: center;
- transition: all 1s;
- max-width: 190px;
- font-weight: bold;
- font-family: 'Courier New', Courier, monospace;
+.object-fit-cover {
+  object-fit: cover;
 }
 
-.input:hover {
- border-top-width: 0.2em;
- background-color: #f1e8e8;
+.hero-overlay {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.35));
+  z-index: 2;
 }
 
-.input:focus {
- border-top-width: 0.2em;
- background-color: #f1e8e8;
+.hero-text-bg {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 2.8rem 4rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.6);
+  max-width: 920px;
+  width: 92%;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.hero-text-bg h1,
+.hero-text-bg .lead,
+.hero-text-bg p {
+  color: #ffffff;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.85);
+}
+
+/* Cards */
+.card {
+  transition: all 0.35s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(90deg, #0d6efd, #0b5ed7);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(13,110,253,0.35);
+}
+
+/* Carousel Fade Effect */
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero h1 { 
+    font-size: 3.4rem; 
+  }
+  
+  .hero .lead { 
+    font-size: 1.4rem; 
+  }
+  
+  .hero-text-bg {
+    padding: 2.2rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text-bg {
+    padding: 1.8rem 1.4rem;
+    border-radius: 16px;
+  }
+  
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero .lead {
+    font-size: 1.35rem !important;
+  }
+}
+/* ── Roster Page Specific ─────────────────────────────────────── */
+
+.roster-page {
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+              url('https://images.unsplash.com/photo-1503387762-592deb58caa5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') 
+              center/cover no-repeat fixed;
+  min-height: 100vh;
+  color: white;
+}
+
+.roster-frame {
+  background: rgba(30, 30, 46, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+  min-height: 800px;
+}
+
+.divider {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #0d6efd, transparent);
+  border-radius: 2px;
+}
+
+/* שיפור תצוגת iframe במובייל */
+@media (max-width: 768px) {
+  .roster-frame iframe {
+    height: 1600px !important;
+  }
+  
+  .roster-page h1 {
+    font-size: 2.8rem;
+  }
+}
+/* ── Procedures Page Specific ─────────────────────────────────────── */
+
+.procedures-page {
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+              url('https://images.unsplash.com/photo-1503387762-592deb58caa5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') 
+              center/cover no-repeat fixed;
+  min-height: 100vh;
+  color: white;
+}
+
+.procedures-frame {
+  background: rgba(30, 30, 46, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+  min-height: 800px;
+}
+
+.divider {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #0d6efd, transparent);
+  border-radius: 2px;
+}
+
+/* שיפור תצוגת iframe במובייל */
+@media (max-width: 768px) {
+  .procedures-frame iframe {
+    height: 1800px !important;   /* גובה מוגדל לנייד - המסמך ארוך */
+  }
+  
+  .procedures-page h1 {
+    font-size: 2.8rem;
+  }
+}
+/* ── Patrol Page Specific ─────────────────────────────────────── */
+
+.patrol-page {
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+              url('https://images.unsplash.com/photo-1503387762-592deb58caa5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') 
+              center/cover no-repeat fixed;
+  min-height: 100vh;
+  color: white;
+}
+
+.bg-dark-transparent {
+  background: rgba(30, 30, 46, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.sub-nav {
+  background: rgba(20, 20, 30, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.divider {
+  width: 140px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #0d6efd, transparent);
+  border-radius: 2px;
+}
+
+/* שיפור קריאות במובייל */
+@media (max-width: 768px) {
+  .patrol-section .card-body {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .patrol-page h1 {
+    font-size: 3rem;
+  }
+}
+/* ── Weekly Schedule Specific ─────────────────────────────────────── */
+
+.schedule-card {
+  background: rgba(30, 30, 46, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+}
+
+.table-dark th,
+.table-dark td {
+  border-color: rgba(255,255,255,0.15);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(13,110,253,0.15) !important;
+}
+
+.table-primary th {
+  background-color: #0d6efd !important;
+  color: white;
+  font-weight: 600;
+}
+/* ── Uniform & Gear Specific ─────────────────────────────────────── */
+
+.uniform-card,
+.pakal-card {
+  background: rgba(30, 30, 46, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+}
+
+.uniform-card img,
+.pakal-card img {
+  max-height: 600px;
+  object-fit: contain;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.card-body h4 {
+  border-bottom: 2px solid rgba(13,110,253,0.4);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+/* ── Detective Page Specific (Black & Gold Theme) ─────────────────────────────── */
+
+.detective-page {
+  background: linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.92)),
+              url('https://images.unsplash.com/photo-1503387762-592deb58caa5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') 
+              center/cover no-repeat fixed;
+  min-height: 100vh;
+  color: #e0d4a8;
+}
+
+.detective-card {
+  background: rgba(15, 15, 20, 0.94);
+  backdrop-filter: blur(12px);
+  border: 1px solid #d4af37;
+  border-radius: 16px;
+}
+
+.divider {
+  width: 160px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  border-radius: 2px;
+}
+
+/* טקסטים בהירים יותר */
+.text-white-75 {
+  color: #e0d4a8 !important;
+  opacity: 1 !important;
+}
+
+footer {
+  background: #0f0f0f !important;
+}
+/* ── Detective Uniform & Gear Specific ─────────────────────────────── */
+
+.detective-card img {
+  max-height: 650px;
+  object-fit: contain;
+  background: #0a0a0a;
+  border: 1px solid rgba(212,175,55,0.25);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+/* ── SWAT Page Specific (Dark Tactical Gray Theme) ─────────────────────────────── */
+
+.swat-page {
+  background: linear-gradient(rgba(0,0,0,0.90), rgba(0,0,0,0.94)),
+              url('https://images.unsplash.com/photo-1503387762-592deb58caa5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') 
+              center/cover no-repeat fixed;
+  min-height: 100vh;
+  color: #e9ecef;
+}
+
+.swat-card {
+  background: rgba(40, 44, 52, 0.94);
+  backdrop-filter: blur(12px);
+  border: 1px solid #6c757d;
+  border-radius: 16px;
+}
+
+.swat-card h4,
+.swat-card h5 {
+  color: #6c757d;
+}
+
+.divider {
+  width: 160px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #6c757d, transparent);
+  border-radius: 2px;
+}
+
+/* טקסטים בהירים ונגישים */
+.text-white-75 {
+  color: #e9ecef !important;
+}
+/* ── SWAT Special Procedures Specific ─────────────────────────────────────── */
+
+.swat-card h4,
+.swat-card h5 {
+  color: #6c757d;
+}
+
+.swat-card ul li {
+  margin-bottom: 0.75rem;
+}
+
+.swat-card hr {
+  border-color: #495057;
+  opacity: 0.5;
+}
+/* ── SWAT Uniform & Gear Specific ─────────────────────────────────────── */
+
+.swat-card img {
+  max-height: 650px;
+  object-fit: contain;
+  background: #111;
+  border: 1px solid rgba(108,117,125,0.3);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+}
+
+.swat-card ul {
+  line-height: 1.8;
 }

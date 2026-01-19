@@ -1,137 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
-  <title>S.W.A.T Home Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LSPD - מדים וציוד | סוואט</title>
   <link rel="icon" href="SWAT.png" type="image/png">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="design.css">
-  <style>
-  body {
-      position: relative; 
-  }
-  </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+<body>
 
-<!-- Navbar - MAIN -->
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <div class="container-fluid">
-    <img src="LSPD.png" class="rounded-circle" alt="Cinque Terre" width="50">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home Page</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="roster.html">Roster</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="policeprocedures.html">Police Procedures</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Patrol.html">Patrol</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Detective.html">Detective</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="SWAT.html">S.W.A.T</a>
-        </li>
-      </ul>
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="LSPD.png" alt="LSPD" width="48" class="me-2 rounded-circle">
+        LSPD
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">ראשי</a></li>
+          <li class="nav-item"><a class="nav-link" href="roster.html">רוסטר</a></li>
+          <li class="nav-item"><a class="nav-link" href="policeprocedures.html">נהלים</a></li>
+          <li class="nav-item"><a class="nav-link" href="Patrol.html">פטרול</a></li>
+          <li class="nav-item"><a class="nav-link" href="Detective.html">דיטקטיב</a></li>
+          <li class="nav-item"><a class="nav-link active" href="SWAT.html">סוואט</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SWAT Sub-Navbar -->
+  <div class="sub-nav py-3 mt-5" style="background: rgba(0,0,0,0.92); backdrop-filter: blur(8px);">
+    <div class="container">
+      <nav class="navbar navbar-expand-sm navbar-dark rounded-pill mx-auto shadow" style="background: #2b2f33; max-width: fit-content; border: 1px solid #6c757d;">
+        <div class="container-fluid justify-content-center px-4">
+          <img src="SWAT.png" alt="SWAT Unit" width="48" class="me-3 rounded-circle">
+          <ul class="navbar-nav small">
+            <li class="nav-item"><a class="nav-link px-4" href="SWAT.html">דף הבית סוואט</a></li>
+            <li class="nav-item"><a class="nav-link active px-4" href="SWATung.html">מדים וציוד</a></li>
+            <li class="nav-item"><a class="nav-link px-4" href="SWATpc.html">נהלים מיוחדים</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
   </div>
-</nav>
-<!-- Navbar - MAIN -->
- <div id="section3" class="container-fluid text-white" style="background-color:#382021; padding:1px 20px;">
-<!-- Navbar - SWAT -->
-<nav class="navbar navbar-expand-sm navbar-dark py-2"
-     style="background-color:#57595B; border-radius:999px; width:fit-content; margin:0 auto 20px auto;">
-  <div class="container-fluid justify-content-center px-4">
-    <img src="SWAT.png" class="rounded-circle" alt="Cinque Terre" width="50">
-    <ul class="navbar-nav small">
-      <li class="nav-item">
-        <a class="nav-link px-3 text-white" href="SWAT.html">S.W.A.T Home Page</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link px-3 text-white" href="SWATung.html">Uniform & Gear</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link px-3 text-white" href="SWATpc.html">Special Procedures</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<!-- Navbar - SWAT -->
-</div>
-<div id="section3" class="container-fluid text-white" style="background-color:#382021; padding:75px 20px;">
-    <h2 class="text-white">מדים וציוד יחידה:</h2>
-</div>
-<div id="section3" class="container-fluid text-white" style="background-color:#57595B; padding:20px 25px;">
-    <h4>מדים:</h4>
-    <p>מדים טקטיים:</p>
-    <p>✦ Tops: 1013 / 1012</p>
-    <p>✦ Undershirt: 263</p>
-    <p>✦ Arms: 4 / 8</p>
-    <p>✦ Decals: 0</p>
-    <p>✦ Vests: 127</p>
-    <p>✦ Bags: 0</p>
-    <p>✦ Pants: 446</p>
-    <p>✦ Shoes: 25</p>
-    <p>✦ Masks: 169</p>
-    <p>✦ Neackwear: 1</p>
-    <p>✦ Hats: 59</p>
-    <p>✦ Eyeglasses: 15 Texture 1</p>
-    <p>✦ Earing: 83</p>
-    <img src="SWATtactic.png" class="rounded" alt="Cinque Terre">
-    <p>מדי משמרת רגילה:</p>
-    <p>✦ Tops: 1007 Texture 8</p>
-    <p>✦ Undershirt: 15</p>
-    <p>✦ Arms: 52</p>
-    <p>✦ Decals: 0</p>
-    <p>✦ Vests: 0</p>
-    <p>✦ Bags: 120</p>
-    <p>✦ Pants: 446</p>
-    <p>✦ Shoes: 25</p>
-    <p>✦ Masks: 0</p>
-    <p>✦ Neackwear: 1</p>
-    <p>✦ Hats: -1</p>
-    <p>✦ Eyeglasses: -1</p>
-    <p>Left Arm: 62</p>
-    <img src="SWATpatrol.png" class="rounded" alt="Cinque Terre">
-</div>
-<div id="section3" class="container-fluid text-black" style="background-color:#E8D1C5; padding:10px 20px;">
-    <h4>ציוד מיוחד:</h4>
-    <p>✦ אקדח - PD Taurus GX4</p>
-    <p>✦ מרסס - PD SIG516 / PD RAM-7</p>
-    <p>✦ כדורים - 10 מחסניות לכדורים של האקדח והמרסס שבחרתם</p>
-    <p>✦ ווסטים - 10</p>
-    <p>✦ אייפק - 15</p>
-    <p>✦ אזיקים - 1</p>
-    <p>✦ אנדרנלין - 10</p>
-    <p>✦ טייזר - 1</p>
-    <p>✦ ג'י פי אס - 1</p>
-    <p>✦ מכשיר קשר - 1</p>
-    <p>✦ מצלמת גוף - 1</p>
-    <p>✦ קורא טביעת אצבע - 1</p>
-    <p>✦ בדיקת ג'י אס אר - 1</p>
-    <p>✦ רימון הלם - 2</p>
-    <p>✦ רימון עשן - 2</p>
-    <p>✦ דוקרנים - 5</p>
-    <h4>שפצורים לנשק:</h4>
-    <p>בחירה חופשית, משתיק על הנשק רק במידה ואתם מגיבים לאירוע כמו שוד או פעילות מבצעית בשאר הזמן המשתיק עליכם באינבנטורי או בפרסונל סטאש</p>
-      <img src="pakalSWAT.png" class="rounded" alt="Cinque Terre">
-</div>
-<!-- Credit -->
-<div id="section3" class="container-fluid bg-basic text-black text-center" style="background-color:#ffffff; padding:1px 20px;">
-  <img src="rvrp.png" class="rounded mx-auto d-block" alt="Cinque Terre" width="50">
-  <h6 class="mt-2">
-    האתר נבנה על ידי tomcupcake ©
-  </h6>
-</div>
-<!-- Credit -->
+
+  <!-- Main Content -->
+  <main class="swat-page pt-5">
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold mb-3" style="color: #6c757d;">מדים וציוד - יחידת הסוואט</h1>
+        <p class="lead fs-4" style="color: #adb5bd;">
+          ציוד טקטי מתקדם • מוכנות מרבית • שליטה במצבי קיצון
+        </p>
+        <div class="divider mx-auto my-4" style="background: linear-gradient(90deg, transparent, #6c757d, transparent);"></div>
+      </div>
+
+      <div class="swat-card card bg-dark-transparent shadow-lg border-0 mb-5" style="border: 1px solid #6c757d;">
+        <div class="card-body p-4 p-md-5">
+          <h2 class="text-center fw-bold mb-5" style="color: #6c757d;">מדים טקטיים</h2>
+
+          <div class="row g-5 align-items-center mb-5">
+            <div class="col-lg-6">
+              <h4 class="fw-bold mb-4" style="color: #6c757d;">מדים טקטיים</h4>
+              <ul class="list-unstyled fs-5 text-white-75 mb-4">
+                <li>✦ Tops: 1013 / 1012</li>
+                <li>✦ Undershirt: 263</li>
+                <li>✦ Arms: 4 / 8</li>
+                <li>✦ Decals: 0</li>
+                <li>✦ Vests: 127</li>
+                <li>✦ Bags: 0</li>
+                <li>✦ Pants: 446</li>
+                <li>✦ Shoes: 25</li>
+                <li>✦ Masks: 169</li>
+                <li>✦ Neckwear: 1</li>
+                <li>✦ Hats: 59</li>
+                <li>✦ Eyeglasses: 15 Texture 1</li>
+                <li>✦ Earring: 83</li>
+              </ul>
+            </div>
+            <div class="col-lg-6 text-center">
+              <img src="SWATtactic.png" class="img-fluid rounded shadow" alt="מדים טקטיים" style="max-height: 650px;">
+            </div>
+          </div>
+
+          <hr class="my-5" style="border-color: #495057;">
+
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+              <h4 class="fw-bold mb-4" style="color: #6c757d;">מדי משמרת רגילה</h4>
+              <ul class="list-unstyled fs-5 text-white-75">
+                <li>✦ Tops: 1007 Texture 8</li>
+                <li>✦ Undershirt: 15</li>
+                <li>✦ Arms: 52</li>
+                <li>✦ Decals: 0</li>
+                <li>✦ Vests: 0</li>
+                <li>✦ Bags: 120</li>
+                <li>✦ Pants: 446</li>
+                <li>✦ Shoes: 25</li>
+                <li>✦ Masks: 0</li>
+                <li>✦ Neckwear: 1</li>
+                <li>✦ Hats: -1</li>
+                <li>✦ Eyeglasses: -1</li>
+                <li>✦ Left Arm: 62</li>
+              </ul>
+            </div>
+            <div class="col-lg-6 order-lg-1 text-center">
+              <img src="SWATpatrol.png" class="img-fluid rounded shadow" alt="מדי משמרת רגילה" style="max-height: 650px;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ציוד מיוחד -->
+      <div class="swat-card card bg-dark-transparent shadow-lg border-0" style="border: 1px solid #6c757d;">
+        <div class="card-body p-5 text-center">
+          <h2 class="fw-bold mb-5" style="color: #6c757d;">ציוד מיוחד</h2>
+
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-8">
+              <ul class="list-unstyled fs-5 text-white-75 text-start">
+                <li>✦ אקדח - PD Taurus GX4</li>
+                <li>✦ מרסס - PD SIG516 / PD RAM-7</li>
+                <li>✦ כדורים - 10 מחסניות לכדורים של האקדח והמרסס שבחרתם</li>
+                <li>✦ ווסטים - 10</li>
+                <li>✦ אייפק - 15</li>
+                <li>✦ אזיקים - 1</li>
+                <li>✦ אנדרנלין - 10</li>
+                <li>✦ טייזר - 1</li>
+                <li>✦ ג'י פי אס - 1</li>
+                <li>✦ מכשיר קשר - 1</li>
+                <li>✦ מצלמת גוף - 1</li>
+                <li>✦ קורא טביעת אצבע - 1</li>
+                <li>✦ בדיקת ג'י אס אר - 1</li>
+                <li>✦ רימון הלם - 2</li>
+                <li>✦ רימון עשן - 2</li>
+                <li>✦ דוקרנים - 5</li>
+              </ul>
+
+              <hr class="my-5" style="border-color: #495057;">
+
+              <h5 class="fw-bold mb-4" style="color: #adb5bd;">שפצורים לנשק:</h5>
+              <p class="fs-5 text-white-75">
+                בחירה חופשית, משתיק על הנשק רק במידה ואתם מגיבים לאירוע כמו שוד או פעילות מבצעית.<br>
+                <strong>בשאר הזמן</strong> – המשתיק באינבנטורי או בפרסונל סטאש.
+              </p>
+            </div>
+
+            <div class="col-md-8 text-center mt-4">
+              <img src="pakalSWAT.png" class="img-fluid rounded shadow" alt="ציוד מיוחד SWAT" style="max-height: 550px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center py-5 mt-5" style="border-top: 2px solid #6c757d;">
+    <div class="container">
+      <img src="rvrp.png" alt="RV-RP" width="60" class="mb-3 rounded-circle">
+      <p class="mb-2 text-white">© 2025–2026 | האתר נבנה על ידי tomcupcake</p>
+      <p class="text-white small mb-0">Los Santos Police Department – Roleplay Server</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

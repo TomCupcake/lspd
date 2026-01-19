@@ -1,115 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
-  <title>S.W.A.T Home Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LSPD - נהלים מיוחדים | סוואט</title>
   <link rel="icon" href="SWAT.png" type="image/png">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="design.css">
-  <style>
-  body {
-      position: relative; 
-  }
-  </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+<body>
 
-<!-- Navbar - MAIN -->
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <div class="container-fluid">
-    <img src="LSPD.png" class="rounded-circle" alt="Cinque Terre" width="50">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home Page</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="roster.html">Roster</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="policeprocedures.html">Police Procedures</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Patrol.html">Patrol</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Detective.html">Detective</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="SWAT.html">S.W.A.T</a>
-        </li>
-      </ul>
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="LSPD.png" alt="LSPD" width="48" class="me-2 rounded-circle">
+        LSPD
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">ראשי</a></li>
+          <li class="nav-item"><a class="nav-link" href="roster.html">רוסטר</a></li>
+          <li class="nav-item"><a class="nav-link" href="policeprocedures.html">נהלים</a></li>
+          <li class="nav-item"><a class="nav-link" href="Patrol.html">פטרול</a></li>
+          <li class="nav-item"><a class="nav-link" href="Detective.html">דיטקטיב</a></li>
+          <li class="nav-item"><a class="nav-link active" href="SWAT.html">סוואט</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SWAT Sub-Navbar -->
+  <div class="sub-nav py-3 mt-5" style="background: rgba(0,0,0,0.92); backdrop-filter: blur(8px);">
+    <div class="container">
+      <nav class="navbar navbar-expand-sm navbar-dark rounded-pill mx-auto shadow" style="background: #2b2f33; max-width: fit-content; border: 1px solid #6c757d;">
+        <div class="container-fluid justify-content-center px-4">
+          <img src="SWAT.png" alt="SWAT Unit" width="48" class="me-3 rounded-circle">
+          <ul class="navbar-nav small">
+            <li class="nav-item"><a class="nav-link px-4" href="SWAT.html">דף הבית סוואט</a></li>
+            <li class="nav-item"><a class="nav-link px-4" href="SWATung.html">מדים וציוד</a></li>
+            <li class="nav-item"><a class="nav-link active px-4" href="SWATpc.html">נהלים מיוחדים</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
   </div>
-</nav>
-<!-- Navbar - MAIN -->
- <div id="section3" class="container-fluid text-white" style="background-color:#382021; padding:1px 20px;">
-<!-- Navbar - SWAT -->
-<nav class="navbar navbar-expand-sm navbar-dark py-2"
-     style="background-color:#57595B; border-radius:999px; width:fit-content; margin:0 auto 20px auto;">
-  <div class="container-fluid justify-content-center px-4">
-    <img src="SWAT.png" class="rounded-circle" alt="Cinque Terre" width="50">
-    <ul class="navbar-nav small">
-      <li class="nav-item">
-        <a class="nav-link px-3 text-white" href="SWAT.html">S.W.A.T Home Page</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link px-3 text-white" href="SWATung.html">Uniform & Gear</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link px-3 text-white" href="SWATpc.html">Special Procedures</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<!-- Navbar - SWAT -->
-</div>
-<div id="section3" class="container-fluid text-white" style="background-color:#382021; padding:75px 20px;">
-    <h2 class="text-white">נהלי יחידה מיוחדים:</h2>
-</div>
-<div id="section3" class="container-fluid text-white" style="background-color:#E8D1C5; padding:10px 20px;"></div>
-<div id="section3" class="container-fluid text-white" style="background-color:#57595B; padding:20px 25px;">
-    <h4>קריטריונים להפעלה:</h4>
-   <p>1. חשוד חמוש ומסוכן</p>
-   <p>2. בני ערובה</p>
-   <p>3. מצור או התבצרות</p>
-   <p>4. פעולת מעצר של עבריינים מסוכנים</p>
-   <p>5. איומי טרור</p>
-   <p>6. חשד לפצצות</p>
-    <div style="padding: 15px;">
-        <p>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
+
+  <!-- Main Content -->
+  <main class="swat-page pt-5">
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold mb-3" style="color: #6c757d;">נהלים מיוחדים - יחידת הסוואט</h1>
+        <p class="lead fs-4" style="color: #adb5bd;">
+          תגובה מדויקת • שליטה מלאה • ביטחון מקסימלי
+        </p>
+        <div class="divider mx-auto my-4" style="background: linear-gradient(90deg, transparent, #6c757d, transparent);"></div>
+      </div>
+
+      <div class="swat-card card bg-dark-transparent shadow-lg border-0 mb-5" style="border: 1px solid #6c757d;">
+        <div class="card-body p-4 p-md-5">
+          <h4 class="fw-bold mb-4" style="color: #6c757d;">קריטריונים להפעלה</h4>
+          <ul class="list-unstyled fs-5 text-white-75 mb-5">
+            <li>1. חשוד חמוש ומסוכן</li>
+            <li>2. בני ערובה</li>
+            <li>3. מצור או התבצרות</li>
+            <li>4. פעולת מעצר של עבריינים מסוכנים</li>
+            <li>5. איומי טרור</li>
+            <li>6. חשד לפצצות</li>
+          </ul>
+
+          <hr class="my-5" style="border-color: #495057;">
+
+          <h4 class="fw-bold mb-4" style="color: #6c757d;">ניהול פריצה ולחימה בשטח בנוי (לש"ב)</h4>
+
+          <h5 class="fw-bold mb-3" style="color: #adb5bd;">שלבי פריצה:</h5>
+          <ul class="list-unstyled fs-5 text-white-75 mb-4">
+            <li>✦ סיור שטח ומודיעין</li>
+            <li>✦ קביעת תפקידים בצוות (פריצה, חיפוי, שמירה אחורנית)</li>
+            <li>✦ שימוש באמצעים לא קטלניים (פלאש, גז), תלוי בגודל החדר/מקום</li>
+          </ul>
+
+          <h5 class="fw-bold mb-3" style="color: #adb5bd;">כללי ירי בלש"ב:</h5>
+          <ul class="list-unstyled fs-5 text-white-75 mb-5">
+            <li>✦ זיהוי חיובי של חשוד</li>
+            <li>✦ הימנעות מירי מקרי על בני ערובה</li>
+          </ul>
+
+          <hr class="my-5" style="border-color: #495057;">
+
+          <h5 class="fw-bold mb-3" style="color: #adb5bd;">נהלי בני ערובה:</h5>
+          <ul class="list-unstyled fs-5 text-white-75 mb-5">
+            <li>✦ עדיפות למו"מ על ידי יחידת הסוואט / דיטקטיב</li>
+            <li>✦ חדירה באישור מנהל אירוע / טקטי בלבד (במקרה של שבירת מו"מ)</li>
+            <li>✦ צלפים בפריסה חיצונית (באישור מנהל אירוע בלבד), לצורך סריקת שטחים וביטחון</li>
+          </ul>
+
+          <hr class="my-5" style="border-color: #495057;">
+
+          <h5 class="fw-bold mb-3" style="color: #adb5bd;">נהלי תיעוד ושקיפות:</h5>
+          <ul class="list-unstyled fs-5 text-white-75">
+            <li>✦ מצלמות גוף (חובה לפעול בזמן משימות, אלא אם כן מדובר במצב סמוי)</li>
+            <li>✦ תיעוד כל שלב מבצעי בדוחות מבצעיים</li>
+            <li>✦ סקירה לאחר מבצע, בדיקת תקינות / תחקיר של דיטקטיבים</li>
+          </ul>
+        </div>
+      </div>
     </div>
-   <h4>ניהול פריצה ולחימה בשטח בנוי (לש"ב):</h4>
-    <div style="padding: 15px;"></div>
-    <p>שלבי פריצה:</p>
-    <p>✦ סיור שטח ומודיעין</p>
-    <p>✦ קביעת תפקידים בצוות (פריצה, חיפוי, שמירה אחורנית) </p>
-    <p>✦ שימוש באמצעים לא קטלניים (פלאש, גז), תלוי בגודל החדר / מקום אליו אנו פורצים</p>
-    <div style="padding: 5px;"></div>
-    <p>כללי ירי בלש"ב (לחימה בשטח בנוי):</p>
-    <p>✦ זיהוי חיובי של חשוד</p>
-    <p>✦ הימנעות מירי מקרי על בני ערובה</p>
-    <div style="padding: 15px;"></div>
-    <p>נהלי בני ערובה:</p>
-    <p>✦ עדיפות למו"מ על ידי יחידת הסוואט / דיטקטיב.</p>
-    <p>✦ חדירה באישור מנהל אירוע / טקטי בלבד (במקרה של שבירת מו"מ)</p>
-    <p>✦ צלפים בפריסה חיצונית (באישור מנהל אירוע בלבד), לצורך סריקת שטחים וביטחון</p>
-    <div style="padding: 15px;"></div>
-    <p>נהלי תיעוד ושקיפות:</p>
-    <p>✦ מצלמות גוף (חובה לפעול בזמן משימות, אלא אם כן מדובר במצב סמוי)</p>
-    <p>✦ תיעוד כל שלב מבצעי בדוחות מבצעיים</p>
-    <p>✦ סקירה לאחר מבצע, בדיקת תקינות / תחקיר של דיטקטיבים</p>
-</div>
-<!-- Credit -->
-<div id="section3" class="container-fluid bg-basic text-black text-center" style="background-color:#ffffff; padding:1px 20px;">
-  <img src="rvrp.png" class="rounded mx-auto d-block" alt="Cinque Terre" width="50">
-  <h6 class="mt-2">
-    האתר נבנה על ידי tomcupcake ©
-  </h6>
-</div>
-<!-- Credit -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center py-5 mt-5" style="border-top: 2px solid #6c757d;">
+    <div class="container">
+      <img src="rvrp.png" alt="RV-RP" width="60" class="mb-3 rounded-circle">
+      <p class="mb-2 text-white">© 2025–2026 | האתר נבנה על ידי tomcupcake</p>
+      <p class="text-white small mb-0">Los Santos Police Department – Roleplay Server</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
