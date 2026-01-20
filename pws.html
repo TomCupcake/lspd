@@ -7,6 +7,64 @@
   <link rel="icon" href="Patrol.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="design.css">
+  <style>
+    /* עיצוב ספציפי לטבלה הזו – אפשר להוסיף ל-design.css אם תרצה */
+    .schedule-table {
+      font-size: 0.95rem;
+      border-collapse: separate;
+      border-spacing: 0;
+      width: 100%;
+      background: rgba(20, 25, 35, 0.85);
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+
+    .schedule-table thead th {
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
+      color: white;
+      font-weight: 600;
+      padding: 1rem 0.8rem;
+      border: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    .schedule-table th:first-child,
+    .schedule-table td:first-child {
+      font-weight: 600;
+      background: rgba(30, 35, 45, 0.7);
+      color: #93c5fd;
+    }
+
+    .schedule-table td {
+      padding: 1.1rem 0.9rem;
+      border: 1px solid rgba(96, 165, 250, 0.12);
+      vertical-align: middle;
+      line-height: 1.5;
+      transition: background 0.2s ease;
+    }
+
+    .schedule-table tbody tr:hover td {
+      background: rgba(59, 130, 246, 0.12);
+    }
+
+    .schedule-table .time-col {
+      min-width: 80px;
+      font-weight: 700;
+      color: #60a5fa;
+    }
+
+    @media (max-width: 992px) {
+      .schedule-table {
+        font-size: 0.9rem;
+      }
+      .schedule-table td, .schedule-table th {
+        padding: 0.9rem 0.6rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -50,6 +108,91 @@
   </div>
 
   <!-- Main Content -->
+<style>
+  .schedule-wrapper {
+    background: rgba(15, 18, 25, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 1.25rem;
+    border: 1px solid rgba(45, 55, 75, 0.55);
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.65);
+  }
+
+  .schedule-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.97rem;
+    color: #e5e7eb;
+  }
+
+  .schedule-table thead th {
+    background: #111827;
+    color: #f3f4f6;
+    font-weight: 600;
+    padding: 1.15rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #2d3748;
+    text-transform: uppercase;
+    font-size: 0.88rem;
+    letter-spacing: 0.5px;
+  }
+
+  .schedule-table th.time-header,
+  .schedule-table td.time-col {
+    font-weight: 700;
+    color: #93c5fd;
+    background: #0f172a;
+    min-width: 90px;
+  }
+
+  .schedule-table td {
+    padding: 1.25rem 1.1rem;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #2d3748;
+    border-left: 1px solid #2d3748;
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .schedule-table td:last-child {
+    border-right: 1px solid #2d3748;
+  }
+
+  .schedule-table tbody tr {
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .schedule-table tbody tr:hover {
+    transform: translateY(-3px);
+    background: rgba(30, 41, 59, 0.95) !important;
+    box-shadow: 
+      0 10px 25px rgba(0, 0, 0, 0.4),
+      inset 0 0 15px rgba(96, 165, 250, 0.12);
+  }
+
+  .schedule-table tbody tr:hover td {
+    color: #f1f5f9;
+    border-color: rgba(96, 165, 250, 0.25);
+  }
+
+  .schedule-table tbody tr:hover .time-col {
+    color: #bfdbfe;
+    background: rgba(30, 41, 59, 1);
+    box-shadow: inset 0 0 12px rgba(59, 130, 246, 0.15);
+  }
+
+  .schedule-table tbody tr td {
+    position: relative;
+  }
+
+  @media (max-width: 992px) {
+    .schedule-table td, .schedule-table th {
+      padding: 1rem 0.8rem;
+      font-size: 0.93rem;
+    }
+  }
+</style>
   <main class="patrol-page pt-5">
     <div class="container py-5">
       <div class="text-center mb-5">
@@ -60,110 +203,176 @@
         <div class="divider mx-auto my-4"></div>
       </div>
 
-      <!-- Schedule Table -->
+      <!-- Schedule Table – sleek & modern -->
       <div class="schedule-card card bg-dark-transparent shadow-lg border-0 overflow-hidden">
-        <div class="card-body p-4 p-md-5">
+        <div class="card-body p-3 p-md-5">
           <div class="table-responsive">
-            <table class="table table-dark table-hover table-bordered text-center">
-              <thead class="table-primary">
+            <table class="schedule-table table text-center">
+              <thead>
                 <tr>
-                  <th scope="col">שעה / יום</th>
-                  <th scope="col">ראשון</th>
-                  <th scope="col">שני</th>
-                  <th scope="col">שלישי</th>
-                  <th scope="col">רביעי</th>
-                  <th scope="col">חמישי</th>
-                  <th scope="col">שישי</th>
-                  <th scope="col">שבת</th>
+                  <th class="time-col">שעה</th>
+                  <th>ראשון</th>
+                  <th>שני</th>
+                  <th>שלישי</th>
+                  <th>רביעי</th>
+                  <th>חמישי</th>
+                  <th>שישי</th>
+                  <th>שבת</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">17:00</th>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
+                  <td class="time-col">17:00</td>
+                  <td>משמרת מפקד + תדריך</td>
+                  <td>Roll Call + משמרת מפקד</td>
+                  <td>משמרת מפקד + תדריך</td>
+                  <td>משמרת מפקד + תדריך + נגב על נהלים</td>
+                  <td>Roll Call + משמרת מפקד</td>
+                  <td>Roll Call + משמרת מפקד</td>
+                  <td>תדריך + משמרת מפקד</td>
                 </tr>
                 <tr>
-                  <th scope="row">18:00</th>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
+                  <td class="time-col">17:30</td>
+                  <td>בדיקות, יוד, נשקים ורכבים</td>
+                  <td>בדיקות, יוד, נשקים ורכבים</td>
+                  <td>בדיקות, יוד, נשקים ורכבים</td>
+                  <td>בדיקות, יוד, נשקים ורכבים</td>
+                  <td>בדיקות, יוד, נשקים ורכבים</td>
+                  <td>בדיקות, יוד, נשקים ורכבים</td>
+                  <td>בדיקות, יוד, נשקים ורכבים</td>
                 </tr>
                 <tr>
-                  <th scope="row">19:00</th>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
+                  <td class="time-col">18:00</td>
+                  <td>פריסת כוחות + נקודות חמות</td>
+                  <td>סיורי נוכחות + אכיפה</td>
+                  <td>סיורי נוכחות + אכיפה</td>
+                  <td>סיורי נוכחות + אכיפה</td>
+                  <td>סיורי נוכחות + אכיפה</td>
+                  <td>סיורי נוכחות + אכיפה</td>
+                  <td>סיורי נוכחות + אכיפה</td>
                 </tr>
                 <tr>
-                  <th scope="row">20:00</th>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
+                  <td class="time-col">18:30</td>
+                  <td>פיקוד שיבוץ - סיורי שיבוץ</td>
+                  <td>פעילות אכיפה</td>
+                  <td>פעילות אכיפה + בקרות</td>
+                  <td>פעילות אכיפה + בקרות</td>
+                  <td>פעילות אכיפה + בקרות</td>
+                  <td>פעילות אכיפה + בקרות</td>
+                  <td>פעילות אכיפה + בקרות</td>
                 </tr>
                 <tr>
-                  <th scope="row">21:00</th>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
+                  <td class="time-col">19:00</td>
+                  <td>בחינות דוחות</td>
+                  <td>בחינות דוחות</td>
+                  <td>בחינות דוחות</td>
+                  <td>בחינות דוחות</td>
+                  <td>סיור בקריאות + אכיפה</td>
+                  <td>סיור בקריאות + אכיפה</td>
+                  <td>סיור בקריאות + אכיפה</td>
                 </tr>
                 <tr>
-                  <th scope="row">22:00</th>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
+                  <td class="time-col">19:30</td>
+                  <td>סיורי נוכחות + אכיפה</td>
+                  <td>פשיטות + יוזמות</td>
+                  <td>פשיטות + יוזמות</td>
+                  <td>פשיטות + יוזמות</td>
+                  <td>פשיטות + יוזמות</td>
+                  <td>פשיטות + יוזמות</td>
+                  <td>פשיטות + יוזמות</td>
                 </tr>
                 <tr>
-                  <th scope="row">23:00</th>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
+                  <td class="time-col">20:00</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
                 </tr>
                 <tr>
-                  <th scope="row">00:00</th>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
+                  <td class="time-col">20:30</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                </tr>
+                <tr>
+                  <td class="time-col">21:00</td>
+                  <td>תרגול תאומי כוחות</td>
+                  <td>תרגול תאומי כוחות</td>
+                  <td>תרגול תאומי כוחות</td>
+                  <td>תרגול תאומי כוחות</td>
+                  <td>תרגול תאומי כוחות</td>
+                  <td>תרגול תאומי כוחות</td>
+                  <td>תרגול תאומי כוחות</td>
+                </tr>
+                <tr>
+                  <td class="time-col">21:30</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                </tr>
+                <tr>
+                  <td class="time-col">22:00</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                </tr>
+                <tr>
+                  <td class="time-col">22:30</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                  <td>סיורי לילה</td>
+                </tr>
+                <tr>
+                  <td class="time-col">23:00</td>
+                  <td>תחקיר משמרת + "שחק"</td>
+                  <td>תחקיר משמרת</td>
+                  <td>תחקיר משמרת</td>
+                  <td>תחקיר משמרת</td>
+                  <td>תחקיר משמרת</td>
+                  <td>תחקיר משמרת</td>
+                  <td>תחקיר משמרת</td>
+                </tr>
+                <tr>
+                  <td class="time-col">23:30</td>
+                  <td>זמנות מבצעיות</td>
+                  <td>זמנות מבצעיות</td>
+                  <td>זמנות מבצעיות</td>
+                  <td>זמנות מבצעיות</td>
+                  <td>זמנות מבצעיות</td>
+                  <td>זמנות מבצעיות</td>
+                  <td>זמנות מבצעיות</td>
+                </tr>
+                <tr>
+                  <td class="time-col">00:00</td>
+                  <td>סיורי לילה + סיירת משמרת + בינסט + משטרות לילה</td>
+                  <td>סיורי לילה + סיירת משמרת + בינסט + משטרות לילה</td>
+                  <td>סיורי לילה + סיירת משמרת + בינסט + משטרות לילה</td>
+                  <td>סיורי לילה + סיירת משמרת + בינסט + משטרות לילה</td>
+                  <td>סיורי לילה + סיירת משמרת + בינסט + משטרות לילה</td>
+                  <td>סיורי לילה + סיירת משמרת + בינסט + משטרות לילה</td>
+                  <td>סיורי לילה + סיירת משמרת + בינסט + משטרות לילה</td>
                 </tr>
               </tbody>
             </table>
-          </div>
-
-          <!-- הערה קטנה -->
-          <div class="text-center mt-5">
           </div>
         </div>
       </div>
@@ -175,6 +384,7 @@
     <div class="container">
       <img src="rvrp.png" alt="RV-RP" width="60" class="mb-3 rounded-circle">
       <p class="mb-2">© 2025–2026 | האתר נבנה על ידי tomcupcake</p>
+      <p class="text-muted small mb-0">Los Santos Police Department – Roleplay Server</p>
     </div>
   </footer>
 
