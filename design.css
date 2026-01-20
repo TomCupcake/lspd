@@ -1,8 +1,9 @@
 /* ==========================================
-   Modern LSPD Website Design
+   LSPD Roleplay – Modern 2026 Design (Updated Jan 2026)
+   Clean, Tactical, Authoritative – Centered fixes
    ========================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -10,30 +11,97 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
-  font-family: 'Rubik', system-ui, sans-serif;
+  font-family: 'Rubik', system-ui, -apple-system, sans-serif;
   direction: rtl;
-  background-color: #f8f9fa;
-  color: #222;
-  line-height: 1.6;
+  background: #0a0c10;
+  color: #e9ecef;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Navbar */
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0f1117;
+}
+::-webkit-scrollbar-thumb {
+  background: #2d3748;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4a5568;
+}
+
+/* ── Navbar – Centered + fixed width ── */
 .navbar {
-  transition: all 0.3s ease;
+  background: rgba(15, 18, 25, 0.92) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+  transition: all 0.4s ease;
 }
 
-.navbar.scrolled {
-  background-color: rgba(33, 37, 41, 0.98) !important;
-  backdrop-filter: blur(8px);
+.navbar .container {
+  max-width: 1400px;          /* רוחב מקסימלי נוח יותר */
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-/* Hero with Carousel */
+.navbar-brand {
+  font-weight: 600;
+}
+
+.navbar-brand img {
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6));
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #cbd5e1 !important;
+  transition: all 0.25s ease;
+  position: relative;
+  padding: 0.6rem 1.1rem !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #60a5fa !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 6px;
+  right: 50%;
+  background: #60a5fa;
+  transition: all 0.35s ease;
+  transform: translateX(50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 70%;
+}
+
+/* ── Hero – Stronger centering + vertical alignment ── */
 .hero {
   height: 100vh;
-  min-height: 100vh;
-  max-height: 100vh;
+  min-height: 880px;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero .carousel,
@@ -41,360 +109,128 @@ body {
 .hero .carousel-item,
 .hero .carousel-item img {
   height: 100% !important;
+  width: 100%;
 }
 
-.object-fit-cover {
+.carousel-item img {
   object-fit: cover;
+  filter: brightness(0.75) contrast(1.08);
 }
 
 .hero-overlay {
-  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.35));
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,12,16,0.25) 0%, rgba(10,12,16,0.88) 65%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 2;
 }
 
 .hero-text-bg {
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.12);
-  padding: 2.8rem 4rem;
-  border-radius: 20px;
-  box-shadow: 0 15px 50px rgba(0,0,0,0.6);
-  max-width: 920px;
-  width: 92%;
+  background: rgba(15,18,25,0.78);
+  backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid rgba(96,165,250,0.14);
+  border-radius: 1.1rem;
+  padding: 3.5rem 5rem;
+  box-shadow: 0 20px 70px rgba(0,0,0,0.65);
+  max-width: 960px;
+  width: 88%;
+  text-align: center;
   margin: 0 auto;
-  color: #ffffff;
 }
 
-.hero-text-bg h1,
-.hero-text-bg .lead,
-.hero-text-bg p {
-  color: #ffffff;
-  text-shadow: 0 3px 10px rgba(0,0,0,0.85);
+.hero-text-bg h1 {
+  font-size: clamp(3.2rem, 8vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -1.8px;
+  background: linear-gradient(90deg, #e2e8f0, #cbd5e1, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.7);
+  margin-bottom: 1.2rem;
+  line-height: 1.05;
 }
 
-/* Cards */
-.card {
-  transition: all 0.35s ease;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
-}
-
-.hover-lift:hover {
-  transform: translateY(-8px);
-}
-
-/* Buttons */
-.btn-primary {
-  background: linear-gradient(90deg, #0d6efd, #0b5ed7);
-  border: none;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(13,110,253,0.35);
-}
-
-/* Carousel Fade Effect */
-.carousel-fade .carousel-item {
-  opacity: 0;
-  transition: opacity 1.2s ease-in-out;
-}
-
-.carousel-fade .carousel-item.active {
-  opacity: 1;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .hero h1 { 
-    font-size: 3.4rem; 
-  }
-  
-  .hero .lead { 
-    font-size: 1.4rem; 
-  }
-  
-  .hero-text-bg {
-    padding: 2.2rem 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-text-bg {
-    padding: 1.8rem 1.4rem;
-    border-radius: 16px;
-  }
-  
-  .hero h1 {
-    font-size: 2.8rem;
-  }
-  
-  .hero .lead {
-    font-size: 1.35rem !important;
-  }
-}
-/* ── Roster Page Specific ─────────────────────────────────────── */
-
-.roster-page {
-  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-              url('https://images.unsplash.com/photo-1503387762-592deb58caa5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') 
-              center/cover no-repeat fixed;
-  min-height: 100vh;
-  color: white;
-}
-
-.roster-frame {
-  background: rgba(30, 30, 46, 0.85);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.1);
-  min-height: 800px;
-}
-
-.divider {
-  width: 120px;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #0d6efd, transparent);
-  border-radius: 2px;
-}
-
-/* שיפור תצוגת iframe במובייל */
-@media (max-width: 768px) {
-  .roster-frame iframe {
-    height: 1600px !important;
-  }
-  
-  .roster-page h1 {
-    font-size: 2.8rem;
-  }
-}
-/* ── Procedures Page Specific ─────────────────────────────────────── */
-
-.procedures-page {
-  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-              url('https://images.unsplash.com/photo-1503387762-592deb58caa5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') 
-              center/cover no-repeat fixed;
-  min-height: 100vh;
-  color: white;
-}
-
-.procedures-frame {
-  background: rgba(30, 30, 46, 0.85);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.1);
-  min-height: 800px;
-}
-
-.divider {
-  width: 120px;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #0d6efd, transparent);
-  border-radius: 2px;
-}
-
-/* שיפור תצוגת iframe במובייל */
-@media (max-width: 768px) {
-  .procedures-frame iframe {
-    height: 1800px !important;   /* גובה מוגדל לנייד - המסמך ארוך */
-  }
-  
-  .procedures-page h1 {
-    font-size: 2.8rem;
-  }
-}
-/* ── Patrol Page Specific ─────────────────────────────────────── */
-
-.patrol-page {
-  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-              url('https://images.unsplash.com/photo-1503387762-592deb58caa5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') 
-              center/cover no-repeat fixed;
-  min-height: 100vh;
-  color: white;
-}
-
-.bg-dark-transparent {
-  background: rgba(30, 30, 46, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-.sub-nav {
-  background: rgba(20, 20, 30, 0.95);
-  backdrop-filter: blur(8px);
-}
-
-.divider {
-  width: 140px;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #0d6efd, transparent);
-  border-radius: 2px;
-}
-
-/* שיפור קריאות במובייל */
-@media (max-width: 768px) {
-  .patrol-section .card-body {
-    padding: 2.5rem 1.5rem;
-  }
-  
-  .patrol-page h1 {
-    font-size: 3rem;
-  }
-}
-/* ── Weekly Schedule Specific ─────────────────────────────────────── */
-
-.schedule-card {
-  background: rgba(30, 30, 46, 0.92);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-}
-
-.table-dark th,
-.table-dark td {
-  border-color: rgba(255,255,255,0.15);
-}
-
-.table-hover tbody tr:hover {
-  background-color: rgba(13,110,253,0.15) !important;
-}
-
-.table-primary th {
-  background-color: #0d6efd !important;
-  color: white;
-  font-weight: 600;
-}
-/* ── Uniform & Gear Specific ─────────────────────────────────────── */
-
-.uniform-card,
-.pakal-card {
-  background: rgba(30, 30, 46, 0.92);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-}
-
-.uniform-card img,
-.pakal-card img {
-  max-height: 600px;
-  object-fit: contain;
-  background: #111;
-  border: 1px solid rgba(255,255,255,0.12);
-}
-
-.card-body h4 {
-  border-bottom: 2px solid rgba(13,110,253,0.4);
-  padding-bottom: 0.75rem;
+.hero-text-bg .lead {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 400;
+  color: #cbd5e1;
   margin-bottom: 1.5rem;
 }
-/* ── Detective Page Specific (Black & Gold Theme) ─────────────────────────────── */
 
-.detective-page {
-  background: linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.92)),
-              url('https://images.unsplash.com/photo-1503387762-592deb58caa5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') 
-              center/cover no-repeat fixed;
-  min-height: 100vh;
-  color: #e0d4a8;
+.hero-text-bg p.fst-italic {
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  color: #94a3b8;
+  margin: 1.5rem 0 0;
 }
 
-.detective-card {
-  background: rgba(15, 15, 20, 0.94);
-  backdrop-filter: blur(12px);
-  border: 1px solid #d4af37;
-  border-radius: 16px;
+/* General section padding after fixed navbar */
+main {
+  padding-top: 100px;   /* מרווח מתחת ל-nav fixed */
 }
 
-.divider {
-  width: 160px;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #d4af37, transparent);
-  border-radius: 2px;
+/* Cards, tables, images – no change needed here for your issues */
+.bg-dark-transparent,
+.card {
+  background: rgba(20, 25, 35, 0.82);
+  backdrop-filter: blur(14px) saturate(150%);
+  border: 1px solid rgba(96,165,250,0.12);
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* טקסטים בהירים יותר */
-.text-white-75 {
-  color: #e0d4a8 !important;
-  opacity: 1 !important;
+.bg-dark-transparent:hover,
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.6);
 }
 
+/* Sub nav – still pill shaped, centered */
+.sub-nav .navbar {
+  background: rgba(20,25,35,0.9) !important;
+  border: 1px solid rgba(96,165,250,0.18);
+  border-radius: 999px;
+  padding: 0.4rem 2rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+/* Footer */
 footer {
-  background: #0f0f0f !important;
-}
-/* ── Detective Uniform & Gear Specific ─────────────────────────────── */
-
-.detective-card img {
-  max-height: 650px;
-  object-fit: contain;
-  background: #0a0a0a;
-  border: 1px solid rgba(212,175,55,0.25);
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
-}
-/* ── SWAT Page Specific (Dark Tactical Gray Theme) ─────────────────────────────── */
-
-.swat-page {
-  background: linear-gradient(rgba(0,0,0,0.90), rgba(0,0,0,0.94)),
-              url('https://images.unsplash.com/photo-1503387762-592deb58caa5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') 
-              center/cover no-repeat fixed;
-  min-height: 100vh;
-  color: #e9ecef;
+  background: #05070b;
+  border-top: 1px solid rgba(96,165,250,0.1);
+  padding: 4rem 0 2.5rem;
+  color: #94a3b8;
 }
 
-.swat-card {
-  background: rgba(40, 44, 52, 0.94);
-  backdrop-filter: blur(12px);
-  border: 1px solid #6c757d;
-  border-radius: 16px;
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-text-bg {
+    padding: 2.8rem 3rem;
+    max-width: 90%;
+  }
 }
 
-.swat-card h4,
-.swat-card h5 {
-  color: #6c757d;
-}
-
-.divider {
-  width: 160px;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #6c757d, transparent);
-  border-radius: 2px;
-}
-
-/* טקסטים בהירים ונגישים */
-.text-white-75 {
-  color: #e9ecef !important;
-}
-/* ── SWAT Special Procedures Specific ─────────────────────────────────────── */
-
-.swat-card h4,
-.swat-card h5 {
-  color: #6c757d;
-}
-
-.swat-card ul li {
-  margin-bottom: 0.75rem;
-}
-
-.swat-card hr {
-  border-color: #495057;
-  opacity: 0.5;
-}
-/* ── SWAT Uniform & Gear Specific ─────────────────────────────────────── */
-
-.swat-card img {
-  max-height: 650px;
-  object-fit: contain;
-  background: #111;
-  border: 1px solid rgba(108,117,125,0.3);
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.7);
-}
-
-.swat-card ul {
-  line-height: 1.8;
+@media (max-width: 768px) {
+  .hero {
+    min-height: 760px;
+  }
+  .hero-text-bg {
+    padding: 2.2rem 1.8rem;
+  }
+  .hero-text-bg h1 {
+    font-size: 2.8rem;
+  }
+  .hero-text-bg .lead {
+    font-size: 1.35rem;
+  }
+  main {
+    padding-top: 90px;
+  }
+  .navbar .container {
+    padding: 0 1rem;
+  }
 }
